@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>contact us</title>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
+    <section>
+        <div class="section-header">
+            <div class="container">
+                <h2>Contact us</h2>
+                <p>Do you have a question about our menu or want to book a table? Our team is ready to help you anytime. Contact us now and we will reply as fast as possible to give you an unforgettable dining experience.</p>
+            </div>
+        </div>
+        <div class="back-btn-wrapper">
+            <a href="index.html" class="btn-back-main" id="backToMainBtn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Address</h4>
+                            <p>27 Helwan University, Helwan<br> Cairo, Egypt.</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>phone</h4>
+                            <p>+201202609876</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>Email</h4>
+                            <p>IT@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <h2>Send message</h2>
+                        <div class="input-box">
+                            <input type="text" id="userName">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" id="userEmail">
+                            <span>Email</span>
+                        </div>
+                        <div class="input-box">
+                            <textarea id="userMessage"></textarea>
+                            <span>Send Message...</span>
+                        </div>
+                        <div class="input-box">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <ul class="flex-row">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="aboutUs(1).html">About Us</a></li>
+            </ul>
+            <ul class="flex-row">
+                <li><i class="fab fa-youtube"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-github"></i></li>
+            </ul>
+            <p>&copy; 2026 ITproject</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        function updateIcon() {
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            updateIcon();
+            if (body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            updateIcon();
+        }
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return decodeURIComponent(c.substring(nameEQ.length, c.length));
+            }
+            return null;
+        }
+
+        function deleteCookie(name) {
+            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        }
+
+        const nameInput = document.getElementById('userName');
+        const emailInput = document.getElementById('userEmail');
+        const messageInput = document.getElementById('userMessage');
+
+        const savedName = getCookie('contactName');
+        const savedEmail = getCookie('contactEmail');
+        const savedMessage = getCookie('contactMessage');
+
+        if (savedName) nameInput.value = savedName;
+        if (savedEmail) emailInput.value = savedEmail;
+        if (savedMessage) messageInput.value = savedMessage;
+
+        function saveAllToCookies() {
+            if (nameInput.value.trim() !== '') {
+                setCookie('contactName', nameInput.value.trim(), 30);
+            } else {
+                deleteCookie('contactName');
+            }
+
+            if (emailInput.value.trim() !== '') {
+                setCookie('contactEmail', emailInput.value.trim(), 30);
+            } else {
+                deleteCookie('contactEmail');
+            }
+
+            if (messageInput.value.trim() !== '') {
+                setCookie('contactMessage', messageInput.value.trim(), 30);
+            } else {
+                deleteCookie('contactMessage');
+            }
+        }
+
+        nameInput.addEventListener('input', saveAllToCookies);
+        emailInput.addEventListener('input', saveAllToCookies);
+        messageInput.addEventListener('input', saveAllToCookies);
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            document.querySelectorAll('.error-msg').forEach(e => e.remove());
+
+            let isValid = true;
+
+            if (nameInput.value.trim() === '') {
+                showError(nameInput, 'please enter your Name');
+                isValid = false;
+            }
+
+            if (emailInput.value.trim() === '') {
+                showError(emailInput, 'please enter your Email');
+                isValid = false;
+            } else if (!emailInput.value.includes('@')) {
+                showError(emailInput, 'incorrect Email');
+                isValid = false;
+            }
+
+            if (messageInput.value.trim() === '') {
+                showError(messageInput, 'please enter your message');
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('تم الإرسال بنجاح ✓');
+                saveAllToCookies();
+            }
+        });
+
+        function showError(input, msg) {
+            let error = document.createElement('div');
+            error.className = 'error-msg';
+            error.innerText = msg;
+            error.style.color = 'red';
+            error.style.fontSize = '12px';
+            error.style.marginTop = '5px';
+            input.parentNode.appendChild(error);
+            input.style.borderColor = 'red';
+
+            input.addEventListener('input', function() {
+                this.style.borderColor = '';
+                let err = this.parentNode.querySelector('.error-msg');
+                if (err) err.remove();
+            });
+        }
+    </script>
+</body>
+</html>

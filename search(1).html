@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/search(1).css">
+     <link rel="stylesheet" href="css/menu.css">
+     <link rel="stylesheet" href="css/theme.css">
+
+    <title>Recipe Search</title>
+</head>
+<body>
+<header>
+             <button id="theme-toggle" class="theme-btn">
+            <i id="theme-icon" class="fas fa-moon"></i>
+          </button>
+            <div class="header">
+                <div class="left">
+                 <i class="ri-menu-fill" id="menuIcon"></i>
+                <img class="logo" src="images/Skillet.png">
+               <h1 class="web-title">
+                Easy Cooking
+               </h1>
+           </div>
+            </div>
+        </header>
+         <nav class="MenuPages">
+
+              <i class="ri-close-line" id="close-menu"></i>
+
+            <h1>Menu</h1>
+           <div   class="link"> 
+            <a href="index.html">Home</a>
+            <div class="dish-recipe">
+               <a href="Cuisine.html">Main dishes</a>
+            </div>
+            <div class="dish-recipe">
+               <a href="deSSerts.html">Dessert</a>
+            </div>
+            <div class="dish-recipe">
+               <a href="drinks.html">Drinks</a>
+            </div>
+            <a href="aboutUs(1).html">About Us</a>
+            <a href="MyCart.html">My Cart</a>
+            <a href="contact-us (1).html">Contact Us</a>
+             <a href="search(1).html">Search</a>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 170px;">
+        <div class="sidebar">
+            <div class="sidebody">
+                <div class="searchbar">
+                    <input placeholder="search..." id="searchBar" type="text" onkeyup="search()">
+                    <i class="fa-solid fa-magnifying-glass glass"></i>
+                </div>
+                <div class="content-section" id="content-section">
+                    <div class="product">
+                        <img src="images/burger.jpeg" alt="yaya">
+                        <div class="product-info">
+                            <h2>burger</h2>
+                            <h3><a href="hamburger.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/Macaroni-Bechamel.jpg" alt="chicken">
+                        <div class="product-info">
+                            <h2>Macaroni-Bechamel</h2>
+                            <h3><a href="bechamel.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/Classic Chiken Parmesan With Spaghetti/Classic Chiken Parmesan With Spaghetti/Classic Chicken Parmesan With Spaghetti.jpg" alt="meat">
+                        <div class="product-info">
+                            <h2>Chicken Parmesan</h2>
+                            <h3><a href="chicken-parmesan.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/5998932877510380596_121.jpg" alt="lamb">
+                        <div class="product-info">
+                            <h2>strawberry Cheesecake</h2>
+                            <h3><a href="rassberry.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/5998932877510380600_121.jpg" alt="yaya">
+                        <div class="product-info">
+                            <h2>Churros</h2>
+                            <h3><a href="churros.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/WhatsApp Image 2026-05-05 at 12.51.38 PM.jpeg" alt="yaya">
+                        <div class="product-info">
+                            <h2>Cannoli</h2>
+                            <h3><a href="cannoli.html">show recipe</a></h3>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="images/WhatsApp Image 2026-05-05 at 4.44.53 PM(1).jpeg" alt="yaya">
+                        <div class="product-info">
+                            <h2>Mojito</h2>
+                        </div>
+                    </div>
+                    
+                
+                    
+                </div>
+            </div>
+            <div class="sidefoot">
+                <hr>
+                <div class="social-icons">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-youtube"></i>                    
+                    <i class="fa-brands fa-square-github"></i>                    
+                </div>
+            </div>
+        </div>
+
+        <div class="data">
+            <div class="top">
+                <p>+201202609876</p>
+                <p>ITproject@gmail.com</p>
+            </div>
+            <div class="header">
+                <p>SEARCH FOR RECIPES</p>
+            </div>
+
+            <div class="popular-title">
+                <h2>Most Popular</h2>
+            </div>
+            <div class="popular-container">
+                <div class="popular-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400" alt="Popular 1">
+                    <div class="card-details">
+                        <h4>Healthy Salad</h4>
+                        <p>Fresh organic veggies</p>
+                    </div>
+                </div>
+                <div class="popular-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Popular 2">
+                    <div class="card-details">
+                        <h4>Italian Pizza</h4>
+                        <p>Authentic cheesy crust</p>
+                    </div>
+                </div>
+                <div class="popular-card">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=400" alt="Popular 3">
+                    <div class="card-details">
+                        <h4>Club Sandwich</h4>
+                        <p>Classic triple layer</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="BODY">
+                <div id="root"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <ul class="flex-row">
+                <li><a href="login.html">login</a></li>
+                <li><a href="signup.html">sign up</a></li>
+                <li><a href="aboutUs(1).html">About Us</a></li>
+                <li><a href="contact-us (1).html">Contact Us</a></li>
+            </ul>
+            <p>&copy; 2026 ITproject</p>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script src="js/menuIcon1.js"></script>
+    <script src="js/script-theme.js"></script>  
+</body>
+</html>

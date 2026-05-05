@@ -1,0 +1,48 @@
+:root {
+    --bg-color: #ffffff;  
+    --text-color: #000000; 
+    --btn-bg: #ffffff;  
+    --btn-color: #1a1a2e;  
+    --btn-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+    --card-bg: #ffffff;  
+    --content-bg: #ffffff;  
+    --border-color: #e0e0e0;  
+}
+.dark-theme {
+    --bg-color: #121212;  
+    --text-color:#D49A54 ; 
+    --btn-bg: #222222; 
+    --btn-color: #E67E22;
+    --btn-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); 
+    --card-bg: #1E1E1E;  
+    --content-bg: #1E1E1E;
+    --border-color: #333333;  
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* تعديل السرعة لـ 0.3 ثانية */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* توحيد الخط مع الملف القديم */
+} 
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    border-radius: 50px;  
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: var(--btn-shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theme-btn:hover {
+    transform: scale(1.1);
+}

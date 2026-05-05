@@ -1,0 +1,72 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.auth-form {
+    background-color: var(--content-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s ease;
+}
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+.input-group {
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: var(--text-color);
+}
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid beige;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+.input-group input:focus {
+    outline: none;
+}
+.main-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:orangered;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+.main-btn:hover {
+    background-color: #ffffff;
+    color:orangered;
+    border: 1px solid orangered;
+}
+.switch-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+.switch-text a {
+    color:orangered;
+    font-weight: bold;
+    text-decoration: none;
+}
