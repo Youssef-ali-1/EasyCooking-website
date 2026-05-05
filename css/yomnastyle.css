@@ -94,7 +94,7 @@ header {
      position:absolute;
     top: 25px;
     right:10px;
-    font: size 35px;;
+    font-size: 35px;
     cursor:pointer;
  }
  .link {
@@ -104,7 +104,7 @@ header {
     text-align: center;
 }
 
-/* 5. Individual Links */
+
 .link a {
     text-decoration: none;
     color: #333;
@@ -121,7 +121,7 @@ header {
 .dish-recipe {
     display: flex;
     flex-direction: column;
-    padding-left: 15px; /* Indents the sub-links */
+    padding-left: 15px;
     border-left: 2px solid #eee;
     margin-bottom: 5px;
 }
@@ -276,15 +276,15 @@ button a{
     display: flex;
     align-items: center;
     width: 100px;
-    height: 35px; /* Added fixed height for consistency */
-    border: 1px solid #ddd; /* Softer color than #999 */
+    height: 35px;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden; /* Ensures buttons don't spill over corners */
+    overflow: hidden; 
     background-color: #f9f9f9;
 }
 .cart-quantity button{
     background: transparent;
-    flex: 1; /* Makes buttons equal size */
+    flex: 1; 
     height: 100%;
     border: none;
     font-size: 18px;
@@ -312,24 +312,24 @@ button a{
 }
 .total {
     display: flex;
-    justify-content: space-between; /* Space between the word "Total" and the price */
+    justify-content: space-between; 
     align-items: center;
-    margin-top: 20px;            /* Adds space above the total section */
-    padding-top: 15px;           /* Adds space inside, below the line */
-    border-top: 2px solid #eee;  /* A cleaner, softer line */
+    margin-top: 20px;            
+    padding-top: 15px;          
+    border-top: 2px solid #eee;  
 }
 
 .total-title {
     font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;   /* Makes it look like a real checkout */
+    text-transform: uppercase;   
     color: #555;
 }
 
 .total-price {
-    font-size: 22px;             /* Makes the price stand out */
+    font-size: 22px;            
     font-weight: 700;
-    color:rgb(241, 138, 100);              /* Matches your orange theme */
+    color:rgb(241, 138, 100);             
 }
 .btn-buy {
     display: block;
@@ -409,13 +409,13 @@ button a{
     cursor:pointer;
 } 
 header.active {
-    width: 120px !important;
-    height: 100vh !important;
+    width: 120px ;
+    height: 100vh ;
 }
 
-/* 2. Stack Header Items Vertically */
+
 header.active .header {
-    flex-direction: column !important;
+    flex-direction: column ;
     height: 100%;
     justify-content: flex-start;
     align-items: center;
@@ -423,20 +423,20 @@ header.active .header {
     gap: 40px;
 }
 
-/* 3. Stack Logo and Text Vertically */
+
 header.active .left {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: column ;
+    align-items: center ;
 
 }
 
 header.active .logo {
-    padding-left: 0 !important;
+    padding-left: 0 ;
     width: 50px;
     height: 50px;
 }
 
-/* 4. Large Vertical Text */
+
 header.active .web-title {
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -445,7 +445,7 @@ header.active .web-title {
     margin: 0;
 }
 
-/* 5. Cart Icon at the Bottom */
+
 header.active .cart-count {
     position: absolute;
     bottom: 60px;
@@ -453,10 +453,10 @@ header.active .cart-count {
     transform: translateX(-50%);
 }
 
-/* 6. THE PUSH: Move products right and pull them UP */
+
 header.active ~ .products {
-    margin-left: 160px !important; /* Shove content to the right */
-    margin-top: 40px !important;  /* Remove the 150px gap from the top */
+    margin-left: 160px ;
+    margin-top: 40px ;  
 }
 
  :root{
