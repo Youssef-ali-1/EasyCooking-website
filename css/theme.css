@@ -10,7 +10,7 @@
     --text-color: #000000; 
     --content-bg: #ffffff;  
     --border-color: #e0e0e0; 
-    
+ }
 
 .dark-theme {
     --bg-color: #121212;  
@@ -23,7 +23,6 @@
     --content-bg: #1e1e1e;  
     --border-color: #d77214;  
     
-}
 #close-menu {
  color:beige;
 }
