@@ -50,9 +50,7 @@ const updateBadgeCount = () => {
     }
 };
 
-/* =========================================
-   2. INITIAL RENDERING
-   ========================================= */
+
 
 const renderCart = () => {
     const container = document.querySelector(".cart-content");
@@ -83,9 +81,7 @@ const renderCart = () => {
     updateBadgeCount();
 };
 
-/* =========================================
-   3. SINGLE GLOBAL CLICK HANDLER (Fixes the +3 bug)
-   ========================================= */
+
 
 const handleGlobalClicks = (e) => {
     // 1. Sidebar Logic
@@ -137,9 +133,7 @@ const handleGlobalClicks = (e) => {
     }
 };
 
-/* =========================================
-   4. INITIALIZATION
-   ========================================= */
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // Ensure we only have ONE listener active
