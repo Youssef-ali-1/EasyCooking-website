@@ -29,7 +29,7 @@ const addToCart = productBox => {
             }
 
         }
-  // 4th part
+
         const cartBox=document.createElement("div");
     cartBox.classList.add("cart-box");
     cartBox.innerHTML=`<img src="${productImgSrc}" class="cart-img">
@@ -175,7 +175,7 @@ const renderSavedItem = (item) => {
 
     cartContent.appendChild(cartBox);
 
-    // Re-attach all your listeners exactly like in your addToCart function
+   
     cartBox.querySelector(".cart-remove").addEventListener("click", () => {
         cartBox.remove();
         updateCartCount(-1);
@@ -201,7 +201,6 @@ const renderSavedItem = (item) => {
         saveCartToLocalStorage();
     });
 
-    // Important: Update the total and badge count for each loaded item
     updateTotalPrice();
     updateCartCount(1);
 };
