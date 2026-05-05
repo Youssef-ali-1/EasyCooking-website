@@ -6,17 +6,7 @@ body {
     color: #333;
 }
 header {
-  /*  position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
-    padding: 10px 6%;
-    background: white ;
-    box-shadow:0 2px 10px rgba(0 0 0 /10%);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    z-index: 99;*/
+
     position: fixed;
     top: 0;
     left: 0;
@@ -256,7 +246,7 @@ button:hover {
 button a{
      color:white;
      text-decoration: none;
-}  /* leads to cart page*/
+}  /* goes to cart page*/
 .cart-close {
     position:absolute;
     top: 20px;
@@ -277,27 +267,19 @@ button a{
     font-weight: 500;
 }
 .cart-quantity {
-   /* display: flex;
-    width: 100px;
-    border: 1px solid #999;
-    border-radius: 6px;*/
+  
     display: flex;
     align-items: center;
     width: 100px;
-    height: 35px; /* Added fixed height for consistency */
-    border: 1px solid #ddd; /* Softer color than #999 */
+    height: 35px; 
+    border: 1px solid #ddd; 
     border-radius: 8px;
-    overflow: hidden; /* Ensures buttons don't spill over corners */
+    overflow: hidden; 
     background-color: #f9f9f9;
 }
 .cart-quantity button{
- /*  background: transparent;
-    width: 30px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;*/
     background: transparent;
-    flex: 1; /* Makes buttons equal size */
+    flex: 1; 
     height: 100%;
     border: none;
     font-size: 18px;
@@ -305,19 +287,12 @@ button a{
     cursor: pointer;
     padding: 0;
     margin: 0;
-   /* transition: background 0.2s ease, color 0.2s ease;*/
+   
 }
 .cart-quantity #decrement {
     color:#999
 }
  .number{
-   /* display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    border-left:1px solid #999;
-    border-right: 1px solid #999;
-    cursor: default;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -333,24 +308,24 @@ button a{
 }
 .total {
     display: flex;
-    justify-content: space-between; /* Space between the word "Total" and the price */
+    justify-content: space-between; /* Space between total and the price */
     align-items: center;
-    margin-top: 20px;            /* Adds space above the total section */
-    padding-top: 15px;           /* Adds space inside, below the line */
-    border-top: 2px solid #eee;  /* A cleaner, softer line */
+    margin-top: 20px;          
+    padding-top: 15px;         
+    border-top: 2px solid #eee; 
 }
 
 .total-title {
     font-size: 18px;
     font-weight: 600;
-    text-transform: uppercase;   /* Makes it look like a real checkout */
+    text-transform: uppercase;   /*  checkout */
     color: #555;
 }
 
 .total-price {
-    font-size: 22px;             /* Makes the price stand out */
+    font-size: 22px;            
     font-weight: 700;
-    color: #e35f26;              /* Matches your orange theme */
+    color: #e35f26;             
 }
 .btn-buy {
     display: block;
