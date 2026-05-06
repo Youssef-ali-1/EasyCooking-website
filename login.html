@@ -18,16 +18,32 @@
             <h2>log in</h2>
             <div class="input-group">
                 <label>Email</label>
-                <input type="email" id="login-email" required placeholder="Enter your email">
+                <input type="email" id="login-email" placeholder="Enter your email">
             </div>
             <div class="input-group">
                 <label>Password</label>
-                <input type="password" id="login-password" required placeholder="Enter your password">
+                <input type="password" id="login-password"  placeholder="Enter your password">
             </div>
             <button type="submit" class="main-btn">log in</button>
             <p class="switch-text">Don't have an account? <a href="signup.html">Sign up here</a></p>
         </form>
     </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+const emailInput = document.getElementById('login-email');
+loginForm.addEventListener('submit', function(event) {
+    const emailValue = emailInput.value;
+    // Check if the email contains the '@' symbol
+    if (!emailValue.includes('@')) {
+        // Stop the form from submitting
+        event.preventDefault(); 
+        alert('Please enter a valid email address containing "@".');
+    } else {
+        // Reset border if it's correct
+        emailInput.style.borderColor = '';
+    }
+});
+    </script>
     <script src="js/script-theme.js"></script>
     <script src="js/login.js"></script>
     <script src="js/signup.js"></script>
