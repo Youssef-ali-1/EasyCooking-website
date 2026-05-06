@@ -180,7 +180,7 @@ section{
  padding: 10px;
  border: none;
  cursor: pointer;
- background:orangered;
+ background: rgb(227, 95, 38);
  border-radius: 25px; 
 }
 .card button a{
@@ -197,7 +197,7 @@ section{
  button {
     display:block;
     padding:10px 30px;
-    background-color:orangered;
+    background-color: rgb(227, 95, 38);
     border:none;
     border-radius:10px;
     font-size: 16px;
@@ -329,12 +329,12 @@ button a{
 .total-price {
     font-size: 22px;            
     font-weight: 700;
-    color:orangered;             
+    color: rgb(227, 95, 38);             
 }
 .btn-buy {
     display: block;
     padding: 10px 30px;
-    background:orangered;
+    background: rgb(227, 95, 38);
     border: none;
     border-radius: 6px;
     color: white;
