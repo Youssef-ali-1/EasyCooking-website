@@ -127,6 +127,7 @@ img.logo {
 
  #menuIcon{
     font-size: 30px;
+     cursor: pointer;
  }
 .products{
     text-align: center;
