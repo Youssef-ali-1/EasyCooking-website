@@ -261,7 +261,24 @@ body.dark-theme .footer i:hover {
     margin: 0;
     padding-bottom: 10px;
 }
-
- 
+.MenuPages h2{
+    text-align: center;
+    font-size: 30px;
+}
+.MenuPages {
+     position: fixed;
+    top: 0;
+    left:-100%;
+    width: 400px;
+    height: 100%;
+    background:var(--content-bg);
+    z-index: 2000;
+    padding: 30px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: 0.5s;
+ }
+ .MenuPages.active {
+    left:0;
+ }
 
  
