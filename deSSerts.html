@@ -253,17 +253,21 @@
 <script>
     const btn = document.getElementById('layoutBtn');
     const header = document.querySelector('header');
+    
+    const headerState = localStorage.getItem('headerActive');
+    
+    if (headerState === 'true') {
+        header.classList.add('active');
+    }
+
     btn.onclick = function() {
+        // Toggle the class
         header.classList.toggle('active');
+        
+        const isActive = header.classList.contains('active');
+        localStorage.setItem('headerActive', isActive);
     };
 </script>
- <script>
-  const btn = document.getElementById('layoutBtn');
-    const header = document.querySelector('header');
-    btn.onclick = function() {
-        header.classList.toggle('active');
-    };
-    </script>
 <script src="js/addToCart(1).js"></script>
 <script src="js/menuIcon1.js"></script> 
 <script src="js/script-theme.js"></script>
