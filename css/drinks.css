@@ -436,7 +436,17 @@ header.active .logo {
     width: 50px;
     height: 50px;
 }
-
+footer{
+    width: 100%;
+}
+.footer i {
+    cursor: pointer;
+    font-size: 28px;
+    position: relative;
+    z-index: 15;
+    display: inline-block;
+    color: #fff;
+}
 
 header.active .web-title {
     writing-mode: vertical-rl;
@@ -446,7 +456,7 @@ header.active .web-title {
     margin: 0;
 }
 
-/* 5. Cart Icon at the Bottom */
+
 header.active .cart-count {
     position: absolute;
     bottom: 60px;
@@ -456,8 +466,8 @@ header.active .cart-count {
 
 
 header.active ~ .products {
-    margin-left: 160px ; /* place content to the right */
-    margin-top: 40px ;  /* Remove the 150px gap from the top */
+    margin-left: 160px ; 
+    margin-top: 40px ; 
 }
 
  :root{
@@ -488,6 +498,10 @@ header.active ~ .products {
 } a:hover {
     color: beige;
 }
+    .cart{
+        background-color: black;
+    }
+    
 .MenuPages{
     background-color: #000000;
 }
