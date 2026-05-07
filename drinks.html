@@ -175,7 +175,7 @@
     const btn = document.getElementById('layoutBtn');
     const header = document.querySelector('header');
 
-    // 1. Check Local Storage on page load
+   
     const headerState = localStorage.getItem('headerActive');
     
     if (headerState === 'true') {
@@ -183,7 +183,7 @@
     }
 
     btn.onclick = function() {
-        // Toggle the class
+       
         header.classList.toggle('active');
         
         const isActive = header.classList.contains('active');
