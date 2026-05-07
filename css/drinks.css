@@ -211,7 +211,10 @@ button a{
      color:white;
      text-decoration: none;
 }
-footer{ width: 100%;}
+footer{
+    width: 100%;
+     background-color: #dbdbdb;
+}
 .footer {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 0;
@@ -495,7 +498,8 @@ header.active ~ .products {
     --border-color: #d77214; 
 .footer{
    background-color: #1b1b1b;
-} a:hover {
+}
+    a:hover {
     color: beige;
 }
     .cart{
@@ -515,7 +519,7 @@ header.active ~ .products {
 }
 footer{
     width: 100%;
-    background-color: #fff;
+    background-color: #1b1b1b;
 }
 .footer i {
     cursor: pointer;
